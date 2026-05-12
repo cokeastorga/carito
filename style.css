@@ -469,14 +469,26 @@ body,
   font-family: 'Inter', sans-serif !important;
 }
 
-/* ===== SLIDEV DEV UI ADJUSTMENTS ===== */
-/* Hide the hover-triggered TOC sidebar in presentation view */
-.slidev-layout ~ .slidev-nav,
-aside.slidev-nav {
+/* ===== HIDE ALL SLIDEV FLOATING UI / SLIDERS / CONTROLS ===== */
+/* Hide top-right slider, TOC sidebar, and floating controls */
+.slidev-nav,
+.slidev-controls,
+.slidev-icon-btn,
+.slidev-slider,
+.slidev-floating,
+[class*="slidev-nav"],
+[class*="slidev-control"],
+aside.slidev-nav,
+.slidev-layout ~ div[class*="fixed"],
+.slidev-layout ~ nav,
+.fixed.top-0.right-0,
+.absolute.top-0.right-0 {
+  display: none !important;
   opacity: 0 !important;
+  visibility: hidden !important;
   pointer-events: none !important;
-  transition: opacity 0.3s ease !important;
 }
+
 
 /* The entire slide viewport takes full space */
 .slidev-slide-container {
