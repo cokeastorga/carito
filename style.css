@@ -469,18 +469,30 @@ body,
   font-family: 'Inter', sans-serif !important;
 }
 
-/* ===== HIDE TOP-RIGHT NAVIGATION PANEL ===== */
-/* Solo ocultamos el panel/menú de navegación sin afectar la visibilidad de las diapositivas */
-.slidev-nav,
-nav.slidev-nav,
-.slidev-controls,
-.slidev-floating,
-aside.slidev-nav,
-.slidev-nav-controls,
-.slidev-quick-overview {
+/* ===== CONDITIONAL NAVIGATION PANEL CONTROLS ===== */
+/* Ocultar paneles cuando la clase .hide-slidev-ui está activa */
+.hide-slidev-ui .slidev-nav,
+.hide-slidev-ui nav.slidev-nav,
+.hide-slidev-ui .slidev-controls,
+.hide-slidev-ui .slidev-floating,
+.hide-slidev-ui aside.slidev-nav,
+.hide-slidev-ui .slidev-nav-controls,
+.hide-slidev-ui .slidev-quick-overview {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+/* En pantallas móviles (<= 768px), ocultamos los controles predeterminadamente para evitar que tapen las diapositivas, permitiendo mostrarlos con el botón */
+@media (max-width: 768px) {
+  html:not(.show-slidev-ui-mobile) .slidev-nav,
+  html:not(.show-slidev-ui-mobile) nav.slidev-nav,
+  html:not(.show-slidev-ui-mobile) .slidev-controls,
+  html:not(.show-slidev-ui-mobile) aside.slidev-nav {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
 }
 
 
