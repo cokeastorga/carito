@@ -469,41 +469,18 @@ body,
   font-family: 'Inter', sans-serif !important;
 }
 
-/* ===== HIDE ALL SLIDEV FLOATING UI / SLIDERS / CONTROLS ===== */
-/* Eradicate top-right panel, slider, menu buttons, and UI roots */
-#slidev-dev-root,
-#slidev-panel-root,
-#slidev-ui,
+/* ===== HIDE TOP-RIGHT NAVIGATION PANEL ===== */
+/* Solo ocultamos el panel/menú de navegación sin afectar la visibilidad de las diapositivas */
 .slidev-nav,
+nav.slidev-nav,
 .slidev-controls,
-.slidev-icon-btn,
-.slidev-slider,
 .slidev-floating,
-.slidev-nav-controls,
-.slidev-quick-overview,
-[class*="slidev-nav"],
-[class*="slidev-control"],
-[class*="slidev-panel"],
-[class*="slidev-menu"],
-[class*="slidev-drawer"],
 aside.slidev-nav,
-.slidev-layout ~ *,
-#app > div:not(.slidev-slides):not(#slide-content):not([class*="slidev-slide"]),
-#slidev-app > div:not(.slidev-slides):not(#slide-content):not([class*="slidev-slide"]),
-div[class*="fixed top-0"],
-div[class*="absolute top-0 right-0"],
-div[style*="position: fixed"],
-.fixed.top-0.right-0,
-.absolute.top-0.right-0,
-button[title],
-a[title*="Slidev"] {
+.slidev-nav-controls,
+.slidev-quick-overview {
   display: none !important;
   opacity: 0 !important;
-  visibility: hidden !important;
   pointer-events: none !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
 }
 
 
