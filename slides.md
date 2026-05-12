@@ -15,6 +15,27 @@ fonts:
   serif: Playfair Display
 ---
 
+<style>
+/* Erradicar controles de navegación y paneles flotantes globalmente de forma directa */
+#slidev-app nav,
+#app nav,
+nav,
+.slidev-nav,
+.slidev-controls,
+.slidev-icon-btn,
+.slidev-floating,
+aside.slidev-nav,
+.slidev-nav-controls,
+.slidev-quick-overview,
+div[class*="slidev-nav"],
+div[class*="slidev-control"] {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+</style>
+
 <!-- Slide 1: Portada -->
 
 <div class="cover-layout">
