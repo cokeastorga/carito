@@ -1,0 +1,512 @@
+/* =============================================
+   Slidev Global Styles — Señales de Riesgo
+   Psicóloga Ingrid Cabalin
+   
+   Auto-imported by Slidev from project root.
+   All selectors use !important to override
+   the default theme and UnoCSS resets.
+   ============================================= */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===== ROOT-LEVEL BACKGROUND ===== */
+html,
+body,
+#app,
+#slide-content,
+.slidev-slides,
+.slidev-slide-container {
+  background-color: #F5EDE3 !important;
+  background: #F5EDE3 !important;
+}
+
+/* ===== SLIDE LAYOUT BASE ===== */
+.slidev-layout {
+  background-color: #F5EDE3 !important;
+  background: #F5EDE3 !important;
+  color: #4A4A4A !important;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif !important;
+  font-size: 1rem !important;
+  padding: 2.8rem 3.8rem !important;
+  overflow: hidden !important;
+  max-height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ===== TYPOGRAPHY — HEADINGS ===== */
+.slidev-layout h1 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  color: #B83225 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+  margin-top: 0 !important;
+}
+
+.slidev-layout h2 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  color: #B83225 !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+}
+
+.slidev-layout h3 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  color: #D4654A !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+}
+
+/* ===== TYPOGRAPHY — BODY ===== */
+.slidev-layout p,
+.slidev-layout li,
+.slidev-layout span,
+.slidev-layout a,
+.slidev-layout div {
+  font-family: 'Inter', -apple-system, system-ui, sans-serif !important;
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  color: #4A4A4A !important;
+  line-height: 1.6 !important;
+}
+
+/* ===== LISTS ===== */
+.slidev-layout ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.slidev-layout ul li {
+  position: relative !important;
+  padding-left: 1.5em !important;
+  margin-bottom: 0.4em !important;
+}
+
+.slidev-layout ul li::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0.6em !important;
+  width: 8px !important;
+  height: 8px !important;
+  background: #D4654A !important;
+  border-radius: 50% !important;
+  opacity: 0.7 !important;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  width: 60px !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #B83225, #D4654A) !important;
+  border-radius: 2px !important;
+  margin: 1rem 0 !important;
+  border: none !important;
+}
+
+.divider-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: #FBF7F2 !important;
+  border-radius: 14px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(184, 50, 37, 0.08) !important;
+}
+
+.card-accent {
+  background: linear-gradient(135deg, #FBF7F2, rgba(212, 101, 74, 0.08)) !important;
+  border-left: 4px solid #D4654A !important;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in { animation: fadeIn 0.7s ease-out both !important; }
+.animate-fade-up { animation: fadeInUp 0.7s ease-out both !important; }
+.animate-slide-left { animation: slideInLeft 0.7s ease-out both !important; }
+.animate-slide-right { animation: slideInRight 0.7s ease-out both !important; }
+
+.delay-1 { animation-delay: 0.1s !important; }
+.delay-2 { animation-delay: 0.2s !important; }
+.delay-3 { animation-delay: 0.3s !important; }
+.delay-4 { animation-delay: 0.4s !important; }
+.delay-5 { animation-delay: 0.5s !important; }
+
+/* ======================================================
+   SLIDE LAYOUTS
+   ====================================================== */
+
+/* --- COVER (Slide 1) --- */
+.cover-layout {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  align-items: center !important;
+  gap: 3rem !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.cover-image {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.cover-image img {
+  max-height: 60vh !important;
+  width: auto !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 8px 28px rgba(0, 0, 0, 0.12)) !important;
+}
+
+.cover-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.cover-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: #B83225 !important;
+  font-size: 2.8rem !important;
+  font-weight: 900 !important;
+  line-height: 1.08 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.4rem !important;
+  letter-spacing: -0.02em !important;
+}
+
+.cover-subtitle {
+  font-family: 'Inter', sans-serif !important;
+  color: #8A7E73 !important;
+  font-size: 1.15rem !important;
+  font-weight: 300 !important;
+  font-style: italic !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.cover-author {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
+  color: #4A4A4A !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.cover-credentials {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.68rem !important;
+  line-height: 1.7 !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+.cover-credentials p {
+  color: #8A7E73 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* --- SLIDE WITH IMAGE (Slides 3, 4, 7) --- */
+.slide-with-image {
+  display: grid !important;
+  grid-template-columns: 1fr 300px !important;
+  gap: 2rem !important;
+  align-items: start !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.slide-with-image .content {
+  overflow: hidden !important;
+}
+
+.slide-with-image .image-side {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+.slide-with-image .image-side img {
+  max-height: 48vh !important;
+  max-width: 100% !important;
+  width: auto !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.08)) !important;
+  border-radius: 14px !important;
+}
+
+/* --- COMPARISON GRID (Slide 2) --- */
+.comparison-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 3rem !important;
+  align-items: start !important;
+  height: auto !important;
+}
+
+.comparison-column {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.comparison-column img {
+  max-height: 20vh !important;
+  width: auto !important;
+  margin-bottom: 1.5rem !important;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.08)) !important;
+}
+
+.comparison-column p {
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  max-width: 380px !important;
+}
+
+/* --- QUADRANT GRID (Slide 6) --- */
+.quadrant-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: 1fr 1fr !important;
+  gap: 1.2rem !important;
+  height: calc(100% - 70px) !important;
+  width: 100% !important;
+}
+
+.quadrant {
+  background: #FBF7F2 !important;
+  border-radius: 14px !important;
+  padding: 1.8rem !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  border: 1px solid rgba(184, 50, 37, 0.06) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.quadrant:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+}
+
+.quadrant h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: #B83225 !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+  text-transform: uppercase !important;
+}
+
+.quadrant p {
+  font-size: 0.95rem !important;
+  line-height: 1.55 !important;
+}
+
+/* --- COMMUNICATION GRID (Slide 8) --- */
+.comm-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2.5rem !important;
+  height: calc(100% - 70px) !important;
+  width: 100% !important;
+}
+
+.comm-column {
+  overflow: hidden !important;
+}
+
+.comm-column h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.8rem !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 2px solid rgba(184, 50, 37, 0.12) !important;
+}
+
+.comm-column.positive h3 {
+  color: #5E9B6F !important;
+}
+
+.comm-column.negative h3 {
+  color: #8B2252 !important;
+}
+
+.comm-column ul li {
+  font-size: 0.78rem !important;
+  margin-bottom: 0.15em !important;
+  line-height: 1.5 !important;
+}
+
+.comm-column.positive ul li::before {
+  background: #5E9B6F !important;
+}
+
+.comm-column.negative ul li::before {
+  background: #8B2252 !important;
+}
+
+/* --- QUESTIONS LAYOUT (Slide 9) --- */
+.questions-layout {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  height: 100% !important;
+  width: 100% !important;
+  gap: 1.5rem !important;
+}
+
+.questions-layout img {
+  max-height: 38vh !important;
+  width: auto !important;
+  filter: drop-shadow(0 8px 28px rgba(0, 0, 0, 0.1)) !important;
+}
+
+/* --- CLOSING LAYOUT (Slide 10) --- */
+.closing-layout {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  height: 100% !important;
+  width: 100% !important;
+  gap: 1rem !important;
+}
+
+.closing-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: #B83225 !important;
+  font-size: 3.2rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase !important;
+}
+
+.closing-contacts {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.6rem !important;
+  align-items: flex-start !important;
+  background: #FBF7F2 !important;
+  padding: 1.8rem 2.5rem !important;
+  border-radius: 20px !important;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(184, 50, 37, 0.06) !important;
+}
+
+.contact-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.8rem !important;
+  padding: 0.35rem 0 !important;
+  font-size: 1rem !important;
+}
+
+.contact-icon {
+  width: 38px !important;
+  height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  font-size: 1.15rem !important;
+  flex-shrink: 0 !important;
+}
+
+.contact-icon.email { background: rgba(184, 50, 37, 0.1) !important; }
+.contact-icon.instagram { background: linear-gradient(135deg, rgba(131, 58, 180, 0.1), rgba(253, 29, 29, 0.1)) !important; }
+.contact-icon.location { background: rgba(184, 50, 37, 0.1) !important; }
+.contact-icon.whatsapp { background: rgba(37, 211, 102, 0.12) !important; }
+
+/* ===== UTILITY: TEXT ALIGN ===== */
+.text-center {
+  text-align: center !important;
+}
+
+/* ===== SLIDE NUMBER ===== */
+.slidev-page-number {
+  color: #D4654A !important;
+  opacity: 0.4 !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* ===== SLIDEV DEV UI ADJUSTMENTS ===== */
+/* Hide the hover-triggered TOC sidebar in presentation view */
+.slidev-layout ~ .slidev-nav,
+aside.slidev-nav {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease !important;
+}
+
+/* The entire slide viewport takes full space */
+.slidev-slide-container {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure slide backgrounds extend fully */
+#slide-content,
+.slidev-slides {
+  background: #F5EDE3 !important;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 2560px) {
+  .slidev-layout {
+    font-size: 1.2rem !important;
+  }
+  .cover-title {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (min-width: 3840px) {
+  .slidev-layout {
+    font-size: 1.4rem !important;
+  }
+  .cover-title {
+    font-size: 4rem !important;
+  }
+}

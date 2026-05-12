@@ -1,0 +1,14 @@
+{
+  "name": "senales-riesgo-presentacion",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export",
+    "remote": "slidev --remote"
+  },
+  "dependencies": {
+    "@slidev/cli": "^51.1.2",
+    "@slidev/theme-default": "latest"
+  }
+}
