@@ -483,7 +483,7 @@ body,
   pointer-events: none !important;
 }
 
-/* En pantallas móviles (<= 768px), ocultamos los controles predeterminadamente para evitar que tapen las diapositivas, permitiendo mostrarlos con el botón */
+/* En pantallas móviles (<= 768px), ocultamos los controles predeterminadamente para evitar que tapen las diapositivas, permitiendo mostrarlos con el botón. Además, agregamos un margen superior seguro para que los paneles nativos no queden bajo la barra del navegador. */
 @media (max-width: 768px) {
   html:not(.show-slidev-ui-mobile) .slidev-nav,
   html:not(.show-slidev-ui-mobile) nav.slidev-nav,
@@ -492,6 +492,18 @@ body,
     display: none !important;
     opacity: 0 !important;
     pointer-events: none !important;
+  }
+
+  /* Desplazar los paneles superiores y menús hacia abajo para evitar que queden ocultos bajo la barra de direcciones del teléfono */
+  aside.slidev-nav,
+  .slidev-drawer,
+  .slidev-panel,
+  .slidev-menu,
+  .slidev-quick-overview,
+  div[class*="slidev-panel"] {
+    padding-top: 70px !important;
+    margin-top: 15px !important;
+    z-index: 2147483640 !important;
   }
 }
 

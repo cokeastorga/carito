@@ -34,10 +34,11 @@ onMounted(() => {
 <style>
 .custom-ui-toggle-btn {
   position: fixed !important;
-  top: 12px !important;
-  right: 12px !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  top: auto !important;
   z-index: 2147483647 !important; /* Máximo z-index posible para asegurar visibilidad */
-  background: rgba(184, 50, 37, 0.85) !important;
+  background: rgba(184, 50, 37, 0.95) !important;
   color: #FFFFFF !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 20px !important;
